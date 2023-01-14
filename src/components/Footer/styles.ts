@@ -17,8 +17,8 @@ export const FooterPage = styled.div`
 `
 
 export const PixImageBox = styled.img`
-    width: 190px;
-    height: 150px;
+    width: 400px;
+    height: 40px;
 `
 
 export const Copyright = styled.p`
@@ -29,6 +29,7 @@ export const Copyright = styled.p`
 export const CopyrightContainer = styled.div`
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
     gap: 10px;
 `
 
@@ -36,9 +37,15 @@ export const LineCopyright = styled.hr`
     margin-top: 15px;
 `
 
-export const InformationContainer= styled.div`
+export const InformationContainer = styled.div`
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
     margin-bottom: 20px;
     gap: 10px;
+`
+
+export const PagamentForms = styled.div`
+    display: flex;
+    padding-left: 10px;
 `

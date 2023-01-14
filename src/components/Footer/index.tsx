@@ -1,4 +1,4 @@
-import { Copyright, CopyrightContainer, FooterPage, InformationContainer, LineCopyright, PixImageBox } from "./styles";
+import { Copyright, CopyrightContainer, FooterPage, InformationContainer, LineCopyright, PagamentForms, PixImageBox } from "./styles";
 import PixImage from "../../assets/MainPage/pix.svg";
 
 export function FooterPart() {
@@ -13,7 +13,7 @@ export function FooterPart() {
                 <LineCopyright />
                 <CopyrightContainer>
                 <Copyright> © 2023 Império dos Bobux - Todos os direitos reservados. </Copyright>
-                <div><PixImageBox src={PixImage} /></div>
+                <PagamentForms><PixImageBox src={PixImage} /></PagamentForms>
                 </CopyrightContainer>
             </FooterPage>
     )
