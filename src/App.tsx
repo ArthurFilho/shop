@@ -1,16 +1,17 @@
 import { FooterPart } from "./components/Footer";
 import { Header } from "./components/header";
-import { Route } from "react-router-dom";
 import { GlobalStyle } from "./styles/global";
-import { MainPage } from "./pages/HomePage";
+import { Router } from "./Router";
+import { BrowserRouter } from "react-router-dom";
 
 export function App() {
   return (
    <>
     <GlobalStyle />
     <Header />
-    <Route />
-    <MainPage />
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
     <FooterPart />
    </>
   )

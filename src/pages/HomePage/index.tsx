@@ -3,7 +3,7 @@ import { priceFormatter } from "../../utils/formatter";
 
 import { Banner, BodyPart, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
-export function MainPage() {
+export function HomePage() {
     return(
         <BodyPart>
             <Banner />
