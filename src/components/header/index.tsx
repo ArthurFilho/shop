@@ -1,10 +1,11 @@
-import { HeaderContainer, Logo, MenuItems, Search, SearchMenu } from "./styles";
+import { HeaderContainer, ImgLogo, Logo, MenuItems, Search, SearchMenu } from "./styles";
+import LogoC from "../../assets/MainPage/logo.png"
 
 export function Header () {
     return(
         <HeaderContainer>
         <Logo>
-            Ropay
+            <ImgLogo src={LogoC} />
         </Logo>
 
         <MenuItems>

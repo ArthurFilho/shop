@@ -25,3 +25,8 @@ export const SearchMenu = styled.div`
 export const Search = styled.input`
     border: 1px solid black;
 `
+
+export const ImgLogo = styled.img`
+    width: 50px;
+    height: 50px;
+`
