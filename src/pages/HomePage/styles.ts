@@ -65,7 +65,3 @@ export const StarsFeedback = styled.div`
     margin-bottom: 10px;
 `
 
-export const PriceRobux = styled.p`
-
-`
-
