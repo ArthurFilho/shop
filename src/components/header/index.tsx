@@ -12,7 +12,7 @@ export function Header () {
         <MenuItems>
                 <div> <NavLink to="/"> Início </NavLink> </div>
                 <div> <NavLink to="/catalog"> Catálogo </NavLink> </div>
-                <div> Entrar em contato </div>
+                <div> <NavLink to="/contact"> Entrar em contato </NavLink> </div>
             <SearchMenu>
                 <Search type="text" placeholder="Pesquise" />
             </SearchMenu>
