@@ -10,8 +10,8 @@ export function Header () {
                <NavLink to="/"> <ImgLogo src={LogoC} /> </NavLink>
             </Logo>
         <MenuItems>
-                <div> Início </div>
-                <div> Catálogo </div>
+                <div> <NavLink to="/"> Início </NavLink> </div>
+                <div> <NavLink to="/catalog"> Catálogo </NavLink> </div>
                 <div> Entrar em contato </div>
             <SearchMenu>
                 <Search type="text" placeholder="Pesquise" />

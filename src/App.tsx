@@ -8,11 +8,12 @@ export function App() {
   return (
    <>
     <GlobalStyle />
-    <Header />
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-    <FooterPart />
+    
+    <BrowserRouter>
+        <Header />
+          <Router />
+        <FooterPart />
+    </BrowserRouter>
    </>
   )
 }

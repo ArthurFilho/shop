@@ -19,4 +19,9 @@ body, input-security, textarea, button {
     font: 400 1rem Roboto, sans-serif;
     overflow-x: hidden;
 }
+a {
+    color: black;
+    text-decoration: none;
+}
 `
+
