@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 export function HowToBuy() {
     return(
         <>
-        <p>COMO COMPRAR E COMO RECEBO?</p>
+        <h1>COMO COMPRAR E COMO RECEBO?</h1>
 
-        <div> a</div>
+        <div> </div>
 
         <NavLink to="/catalog"> <button>Acessar a loja</button> </NavLink>
         </>

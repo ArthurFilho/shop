@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 export function Gamepass() {
     return(
         <>
-        <h4>Como criar uma gamepass</h4>
+        <h1>Como criar uma gamepass</h1>
 
         <div></div>
 
