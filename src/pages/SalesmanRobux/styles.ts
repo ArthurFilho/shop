@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const MainTitleSalesman = styled.h1`
+export const SubTitleSalesman = styled.p`
     display: flex;
-    margin-right: 700px;
-    margin-bottom: 50px;
+    margin-left: 100px;
 `
 
 export const VideoMaker = styled.div`
@@ -20,6 +19,12 @@ export const SalesmanPage = styled.div`
     align-items: center;
     justify-content: center;
     gap: 10px;
+
+    h1 {
+        display: flex;
+        margin-right: 700px;
+        margin-bottom: 50px;
+    }
 `
 
 export const ButtonCatalog = styled.button`

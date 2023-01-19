@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { ButtonCatalog, GamePassPage, MainTitleGamePass, VideoMakerGamePass } from "./styles";
+import { ButtonCatalog, GamePassPage, VideoMakerGamePass } from "./styles";
 
 export function Gamepass() {
     return(
         <GamePassPage>
-        <MainTitleGamePass>Como criar uma gamepass</MainTitleGamePass>
+        <h1>Como criar uma gamepass</h1>
 
         <VideoMakerGamePass></VideoMakerGamePass>
 

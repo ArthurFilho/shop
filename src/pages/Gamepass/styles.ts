@@ -1,11 +1,5 @@
 import styled from "styled-components";
 
-export const MainTitleGamePass = styled.h1`
-    display: flex;
-    margin-right: 700px;
-    margin-bottom: 50px;
-`
-
 export const VideoMakerGamePass = styled.div`
     width: 400px;
     height: 250px;
@@ -19,6 +13,12 @@ export const GamePassPage = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    
+    h1 {
+        display: flex;
+        margin-right: 700px;
+        margin-bottom: 50px;
+    }
 `
 
 export const ButtonCatalog = styled.button`
