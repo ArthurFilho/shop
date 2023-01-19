@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { BuyPage, VideoMakerBuy } from "./styles";
+import { ButtonCatalog, BuyPage, VideoMakerBuy } from "./styles";
 
 export function HowToBuy() {
     return(
@@ -8,7 +8,7 @@ export function HowToBuy() {
 
         <VideoMakerBuy> </VideoMakerBuy>
 
-        <NavLink to="/catalog"> <button>Acessar a loja</button> </NavLink>
+        <NavLink to="/catalog"> <ButtonCatalog>Acessar a loja</ButtonCatalog> </NavLink>
         </BuyPage>
     )
 }
