@@ -19,14 +19,15 @@ export const MenuItems = styled.div`
 `
 
 export const SearchMenu = styled.div`
-
+    margin-left: 15px;
 `
 
 export const Search = styled.input`
     border: 1px solid black;
+    padding: 5px;
 `
 
 export const ImgLogo = styled.img`
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 120px;
 `

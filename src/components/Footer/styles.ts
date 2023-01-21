@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FooterPage = styled.div`
-    background-color: #484d50;
+    background-color: #F8F8FF;
     color: white;
     height: 300px;
     margin-top: 100px;
@@ -12,7 +12,7 @@ export const FooterPage = styled.div`
         padding-left: 150px;
     }
     p {
-        color: #D3D3D3;
+        color: black;
     }
 `
 

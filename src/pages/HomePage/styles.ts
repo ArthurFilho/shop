@@ -65,3 +65,8 @@ export const StarsFeedback = styled.div`
     margin-bottom: 10px;
 `
 
+export const BoxCatalog = styled.div`
+    display: flex;
+    gap: 30px; 
+    justify-content: center;
+`

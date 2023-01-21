@@ -42,3 +42,9 @@ export const CatalogBody = styled.div`
     margin-left: 100px;
     flex-direction: column;
 `
+
+export const BoxCatalog = styled.div`
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+`

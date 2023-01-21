@@ -1,5 +1,5 @@
 import { HeaderContainer, ImgLogo, Logo, MenuItems, Search, SearchMenu } from "./styles";
-import LogoC from "../../assets/MainPage/logo.png"
+import LogoC from "../../assets/Header/Logo.png"
 import { NavLink } from "react-router-dom";
 
 
@@ -14,6 +14,7 @@ export function Header () {
                 <div> <NavLink to="/catalog"> Catálogo </NavLink> </div>
                 <div> <NavLink to="/contact"> Entrar em contato </NavLink> </div>
             <SearchMenu>
+                <h4>Dúvidas? suporte@deli.com</h4>
                 <Search type="text" placeholder="Pesquise" />
             </SearchMenu>
         </MenuItems>

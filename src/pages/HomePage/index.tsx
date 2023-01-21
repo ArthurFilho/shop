@@ -1,7 +1,7 @@
 import { CreditCard, Check, Truck } from "phosphor-react";
 import { priceFormatter } from "../../utils/formatter";
 
-import { Banner, BodyPart, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
+import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function HomePage() {
     return(
@@ -12,12 +12,37 @@ export function HomePage() {
             <h2>Promoção</h2>
             <p>Confira os produtos que entraram em promoção essa semana!</p>
 
+        <BoxCatalog>
+
             <CatalogContainer>
                 <ImageRobux></ImageRobux>
                 <RobuxSell>500 Robux</RobuxSell>
                 <StarsFeedback> stars </StarsFeedback>
                 <div>{priceFormatter.format(50)}</div>
             </CatalogContainer>
+
+            <CatalogContainer>
+                <ImageRobux></ImageRobux>
+                <RobuxSell>500 Robux</RobuxSell>
+                <StarsFeedback> stars </StarsFeedback>
+                <div>{priceFormatter.format(50)}</div>
+            </CatalogContainer>
+
+            <CatalogContainer>
+                <ImageRobux></ImageRobux>
+                <RobuxSell>500 Robux</RobuxSell>
+                <StarsFeedback> stars </StarsFeedback>
+                <div>{priceFormatter.format(50)}</div>
+            </CatalogContainer>
+
+            <CatalogContainer>
+                <ImageRobux></ImageRobux>
+                <RobuxSell>500 Robux</RobuxSell>
+                <StarsFeedback> stars </StarsFeedback>
+                <div>{priceFormatter.format(50)}</div>
+            </CatalogContainer>
+
+        </BoxCatalog>
 
             </Catalog>
 

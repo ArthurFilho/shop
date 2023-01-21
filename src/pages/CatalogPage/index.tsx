@@ -1,5 +1,5 @@
 import { priceFormatter } from "../../utils/formatter";
-import { CatalogBody, CatalogContainer, CatalogTitle, ContainerFilter, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
+import { BoxCatalog, CatalogBody, CatalogContainer, CatalogTitle, ContainerFilter, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function CatalogPage() {
     return(
@@ -12,12 +12,45 @@ export function CatalogPage() {
 
             </ContainerFilter>
 
+        <BoxCatalog>
+
             <CatalogContainer>
              <ImageRobux></ImageRobux>
                 <RobuxSell>500 Robux</RobuxSell>
                 <StarsFeedback> stars </StarsFeedback>
              <div>{priceFormatter.format(50)}</div>
             </CatalogContainer>
+
+            <CatalogContainer>
+             <ImageRobux></ImageRobux>
+                <RobuxSell>500 Robux</RobuxSell>
+                <StarsFeedback> stars </StarsFeedback>
+             <div>{priceFormatter.format(50)}</div>
+            </CatalogContainer>
+
+            <CatalogContainer>
+             <ImageRobux></ImageRobux>
+                <RobuxSell>500 Robux</RobuxSell>
+                <StarsFeedback> stars </StarsFeedback>
+             <div>{priceFormatter.format(50)}</div>
+            </CatalogContainer>
+
+            <CatalogContainer>
+             <ImageRobux></ImageRobux>
+                <RobuxSell>500 Robux</RobuxSell>
+                <StarsFeedback> stars </StarsFeedback>
+             <div>{priceFormatter.format(50)}</div>
+            </CatalogContainer>
+
+            <CatalogContainer>
+             <ImageRobux></ImageRobux>
+                <RobuxSell>500 Robux</RobuxSell>
+                <StarsFeedback> stars </StarsFeedback>
+             <div>{priceFormatter.format(50)}</div>
+            </CatalogContainer>
+        
+        </BoxCatalog>
+        
         </CatalogBody>
     )
 }
