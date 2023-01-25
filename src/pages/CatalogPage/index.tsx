@@ -1,5 +1,6 @@
+import { StarRating } from "../../components/StarRating";
 import { priceFormatter } from "../../utils/formatter";
-import { BoxCatalog, CatalogBody, CatalogContainer, CatalogTitle, ContainerFilter, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
+import { BoxCatalog, CatalogBody, CatalogContainer, CatalogTitle, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function CatalogPage() {
     return(
@@ -8,45 +9,34 @@ export function CatalogPage() {
                 PRODUTOS
             </CatalogTitle>
 
-            <ContainerFilter>
-
-            </ContainerFilter>
-
         <BoxCatalog>
 
             <CatalogContainer>
              <ImageRobux></ImageRobux>
                 <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-             <div>{priceFormatter.format(50)}</div>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+             <div>{priceFormatter.format(14.99)}</div>
             </CatalogContainer>
 
             <CatalogContainer>
              <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-             <div>{priceFormatter.format(50)}</div>
+                <RobuxSell>1000 Robux</RobuxSell>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+             <div>{priceFormatter.format(29.99)}</div>
             </CatalogContainer>
 
             <CatalogContainer>
              <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-             <div>{priceFormatter.format(50)}</div>
+                <RobuxSell>5000 Robux</RobuxSell>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+             <div>{priceFormatter.format(149.99)}</div>
             </CatalogContainer>
 
             <CatalogContainer>
              <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-             <div>{priceFormatter.format(50)}</div>
-            </CatalogContainer>
-
-            <CatalogContainer>
-             <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-             <div>{priceFormatter.format(50)}</div>
+                <RobuxSell>10000 Robux</RobuxSell>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+             <div>{priceFormatter.format(299.99)}</div>
             </CatalogContainer>
         
         </BoxCatalog>

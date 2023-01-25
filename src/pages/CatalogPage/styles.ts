@@ -28,23 +28,14 @@ export const StarsFeedback = styled.div`
     margin-bottom: 10px;
 `
 
-export const ContainerFilter = styled.div`
-    margin-top: 35px;
-    background-color: black;
-    width: 900px;
-    height: 50px;
-    margin-left: 80px;
-`
-
 export const CatalogBody = styled.div`
     display: flex;
     width: 100%;
-    margin-left: 100px;
     flex-direction: column;
 `
 
 export const BoxCatalog = styled.div`
     display: flex;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
 `

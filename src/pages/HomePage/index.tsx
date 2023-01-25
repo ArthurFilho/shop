@@ -1,4 +1,5 @@
 import { CreditCard, Check, Truck } from "phosphor-react";
+import { StarRating } from "../../components/StarRating";
 import { priceFormatter } from "../../utils/formatter";
 
 import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
@@ -17,29 +18,29 @@ export function HomePage() {
             <CatalogContainer>
                 <ImageRobux></ImageRobux>
                 <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-                <div>{priceFormatter.format(50)}</div>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+                <div>{priceFormatter.format(14.99)}</div>
             </CatalogContainer>
 
             <CatalogContainer>
                 <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-                <div>{priceFormatter.format(50)}</div>
+                <RobuxSell>1000 Robux</RobuxSell>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+                <div>{priceFormatter.format(29.99)}</div>
             </CatalogContainer>
 
             <CatalogContainer>
                 <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-                <div>{priceFormatter.format(50)}</div>
+                <RobuxSell>5000 Robux</RobuxSell>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+                <div>{priceFormatter.format(149.99)}</div>
             </CatalogContainer>
 
             <CatalogContainer>
                 <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> stars </StarsFeedback>
-                <div>{priceFormatter.format(50)}</div>
+                <RobuxSell>10000 Robux</RobuxSell>
+                <StarsFeedback> <StarRating /> </StarsFeedback>
+                <div>{priceFormatter.format(299.99)}</div>
             </CatalogContainer>
 
         </BoxCatalog>
@@ -47,6 +48,7 @@ export function HomePage() {
             </Catalog>
 
             <Certificate>
+                
                 <CertificateContainer>
                     <CreditCard size={100} />
                     <h4>SEUS DADOS ESTÃO SEGUROS!</h4>

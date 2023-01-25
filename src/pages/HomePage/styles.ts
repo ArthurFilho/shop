@@ -4,6 +4,9 @@ import styled from "styled-components";
 export const BodyPart = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 `
 
 export const Banner = styled.div`
@@ -30,11 +33,12 @@ export const Certificate = styled.div`
 `
 export const CertificateContainer = styled.div`
     display: flex;
-    width: 400px;
+    width: 100%;
     height: 200px;
     border: 1px solid black;
     align-items: center;
     text-align: center;
+    justify-content: center;
     flex-direction: column;
     margin-left: 35px;
     gap: 20px;
@@ -66,7 +70,9 @@ export const StarsFeedback = styled.div`
 `
 
 export const BoxCatalog = styled.div`
+    width: 100%;
     display: flex;
     gap: 30px; 
     justify-content: center;
+    align-items: center;
 `
