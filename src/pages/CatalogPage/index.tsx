@@ -20,7 +20,7 @@ export function CatalogPage() {
         {RobuxForSell.map((Robux) =>{
             return(
             <NavLink to="/products">
-                <CatalogContainer key={Robux.id} onClick={InformationRobux(Robux.id)}>
+                <CatalogContainer key={Robux.id} onClick={() => {InformationRobux(Robux.id)}}>
                 <ImageRobux></ImageRobux>
                    <RobuxSell>{priceRobux.format(Robux.valueRobux)} Robux</RobuxSell>
                    <StarsFeedback> <StarRating /> </StarsFeedback>

@@ -1,5 +1,6 @@
 import { CreditCard, Check, Truck } from "phosphor-react";
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
 import { priceFormatter, priceRobux } from "../../utils/formatter";
@@ -8,7 +9,7 @@ import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, C
 
 export function HomePage() {
 
-    const { RobuxForSell } = useContext(ContextContents)
+    const { RobuxForSell ,InformationRobux } = useContext(ContextContents)
 
     return(
         <BodyPart>
@@ -22,12 +23,14 @@ export function HomePage() {
 
             {RobuxForSell.map((Robux) => {
                 return(
-                    <CatalogContainer key={Robux.id}>
+                <NavLink to="/products">
+                    <CatalogContainer key={Robux.id} onClick={() => {InformationRobux(Robux.id)}}>
                         <ImageRobux></ImageRobux>
                         <RobuxSell>{priceRobux.format(Robux.valueRobux)} Robux</RobuxSell>
                         <StarsFeedback> <StarRating /> </StarsFeedback>
                         <div>{priceFormatter.format(Robux.value)}</div>
                     </CatalogContainer>
+                </NavLink>
                 )
             })}
 
