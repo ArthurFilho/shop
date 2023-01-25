@@ -2,7 +2,7 @@ import { CreditCard, Check, Truck } from "phosphor-react";
 import { useContext } from "react";
 import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
-import { priceFormatter } from "../../utils/formatter";
+import { priceFormatter, priceRobux } from "../../utils/formatter";
 
 import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
@@ -24,7 +24,7 @@ export function HomePage() {
                 return(
                     <CatalogContainer key={Robux.id}>
                         <ImageRobux></ImageRobux>
-                        <RobuxSell>{Robux.valueRobux} Robux</RobuxSell>
+                        <RobuxSell>{priceRobux.format(Robux.valueRobux)} Robux</RobuxSell>
                         <StarsFeedback> <StarRating /> </StarsFeedback>
                         <div>{priceFormatter.format(Robux.value)}</div>
                     </CatalogContainer>

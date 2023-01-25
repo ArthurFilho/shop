@@ -1,9 +1,9 @@
 import { ButtonPay, Description, ImageRobux, Product, ProductInfo, ProductsContainer, SellRate } from "./styles";
 import RobuxImage from "../../assets/robux.png"
-import { priceFormatter } from "../../utils/formatter";
+import { priceFormatter, priceRobux } from "../../utils/formatter";
 import SellIcon from '@mui/icons-material/Sell';
 import { StarRating } from "../../components/StarRating";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ContextContents } from "../../context/context";
 
 
@@ -11,7 +11,22 @@ export function Products() {
 
     const { productId, RobuxForSell } = useContext(ContextContents)
 
+    const [ infiniteTime, setInfinityTime ] = useState<number>(0);
+
+    const [ sellRating, setSellRating] = useState<number>(30);
+
      const RobuxSelected = RobuxForSell.filter(Robux => (Robux.id === productId));
+
+     function NumerosAleatorios () {
+      const NumberRandom = Math.floor(Math.random() * 100);
+        setSellRating(NumberRandom)
+     }
+
+    setInterval( function InifiniteLoop () { setInfinityTime(1) },  86400)
+
+     useEffect(()=>{
+        NumerosAleatorios()
+     }, [infiniteTime])
 
     return(
     <ProductsContainer>
@@ -25,13 +40,13 @@ export function Products() {
                 </ImageRobux>
                 <Product>
 
-                        <h1> {RobuxProducts.valueRobux} robux </h1>
+                        <h1> {priceRobux.format(RobuxProducts.valueRobux)} robux </h1>
 
                         <StarRating />
 
-                        <SellRate> <SellIcon fontSize="inherit" />  vendidos nas últimas 20 horas. </SellRate>
+                        <SellRate> <SellIcon fontSize="inherit" /> {sellRating} vendidos nas últimas 20 horas. </SellRate>
 
-                        <div>
+                        <div> 
                             <p> preço promocional </p>
                             <h1> {priceFormatter.format(RobuxProducts.value)} </h1>
                         </div>
