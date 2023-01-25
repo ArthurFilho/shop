@@ -3,6 +3,7 @@ import { Header } from "./components/header";
 import { GlobalStyle } from "./styles/global";
 import { Router } from "./Router";
 import { BrowserRouter } from "react-router-dom";
+import { ContextProvider } from "./context/context";
 
 export function App() {
   return (
@@ -10,9 +11,11 @@ export function App() {
     <GlobalStyle />
     
     <BrowserRouter>
+    <ContextProvider>
         <Header />
           <Router />
         <FooterPart />
+    </ContextProvider>
     </BrowserRouter>
    </>
   )

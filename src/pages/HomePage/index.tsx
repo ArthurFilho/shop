@@ -1,10 +1,15 @@
 import { CreditCard, Check, Truck } from "phosphor-react";
+import { useContext } from "react";
 import { StarRating } from "../../components/StarRating";
+import { ContextContents } from "../../context/context";
 import { priceFormatter } from "../../utils/formatter";
 
 import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function HomePage() {
+
+    const { RobuxForSell } = useContext(ContextContents)
+
     return(
         <BodyPart>
             <Banner />
@@ -15,33 +20,16 @@ export function HomePage() {
 
         <BoxCatalog>
 
-            <CatalogContainer>
-                <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-                <div>{priceFormatter.format(14.99)}</div>
-            </CatalogContainer>
-
-            <CatalogContainer>
-                <ImageRobux></ImageRobux>
-                <RobuxSell>1000 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-                <div>{priceFormatter.format(29.99)}</div>
-            </CatalogContainer>
-
-            <CatalogContainer>
-                <ImageRobux></ImageRobux>
-                <RobuxSell>5000 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-                <div>{priceFormatter.format(149.99)}</div>
-            </CatalogContainer>
-
-            <CatalogContainer>
-                <ImageRobux></ImageRobux>
-                <RobuxSell>10000 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-                <div>{priceFormatter.format(299.99)}</div>
-            </CatalogContainer>
+            {RobuxForSell.map((Robux) => {
+                return(
+                    <CatalogContainer id={Robux.id}>
+                        <ImageRobux></ImageRobux>
+                        <RobuxSell>{Robux.valueRobux} Robux</RobuxSell>
+                        <StarsFeedback> <StarRating /> </StarsFeedback>
+                        <div>{priceFormatter.format(Robux.value)}</div>
+                    </CatalogContainer>
+                )
+            })}
 
         </BoxCatalog>
 

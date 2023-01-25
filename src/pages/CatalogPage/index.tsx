@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { StarRating } from "../../components/StarRating";
+import { ContextContents } from "../../context/context";
 import { priceFormatter } from "../../utils/formatter";
 import { BoxCatalog, CatalogBody, CatalogContainer, CatalogTitle, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function CatalogPage() {
+
+    const { RobuxForSell } = useContext(ContextContents)
+
     return(
         <CatalogBody>
             <CatalogTitle>
@@ -10,35 +15,17 @@ export function CatalogPage() {
             </CatalogTitle>
 
         <BoxCatalog>
-
-            <CatalogContainer>
-             <ImageRobux></ImageRobux>
-                <RobuxSell>500 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-             <div>{priceFormatter.format(14.99)}</div>
-            </CatalogContainer>
-
-            <CatalogContainer>
-             <ImageRobux></ImageRobux>
-                <RobuxSell>1000 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-             <div>{priceFormatter.format(29.99)}</div>
-            </CatalogContainer>
-
-            <CatalogContainer>
-             <ImageRobux></ImageRobux>
-                <RobuxSell>5000 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-             <div>{priceFormatter.format(149.99)}</div>
-            </CatalogContainer>
-
-            <CatalogContainer>
-             <ImageRobux></ImageRobux>
-                <RobuxSell>10000 Robux</RobuxSell>
-                <StarsFeedback> <StarRating /> </StarsFeedback>
-             <div>{priceFormatter.format(299.99)}</div>
-            </CatalogContainer>
-        
+       
+        {RobuxForSell.map((Robux) =>{
+            return(
+                <CatalogContainer id={Robux.id}>
+                <ImageRobux></ImageRobux>
+                   <RobuxSell>{Robux.valueRobux} Robux</RobuxSell>
+                   <StarsFeedback> <StarRating /> </StarsFeedback>
+                <div>{priceFormatter.format(Robux.value)}</div>
+               </CatalogContainer>
+            )
+        })}
         </BoxCatalog>
         
         </CatalogBody>
