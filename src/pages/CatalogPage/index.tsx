@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
 import { priceFormatter } from "../../utils/formatter";
@@ -6,7 +7,7 @@ import { BoxCatalog, CatalogBody, CatalogContainer, CatalogTitle, ImageRobux, Ro
 
 export function CatalogPage() {
 
-    const { RobuxForSell } = useContext(ContextContents)
+    const { RobuxForSell, InformationRobux } = useContext(ContextContents)
 
     return(
         <CatalogBody>
@@ -18,12 +19,14 @@ export function CatalogPage() {
        
         {RobuxForSell.map((Robux) =>{
             return(
-                <CatalogContainer id={Robux.id}>
+            <NavLink to="/products">
+                <CatalogContainer key={Robux.id} onClick={InformationRobux(Robux.id)}>
                 <ImageRobux></ImageRobux>
                    <RobuxSell>{Robux.valueRobux} Robux</RobuxSell>
                    <StarsFeedback> <StarRating /> </StarsFeedback>
                 <div>{priceFormatter.format(Robux.value)}</div>
                </CatalogContainer>
+            </NavLink>
             )
         })}
         </BoxCatalog>

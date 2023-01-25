@@ -34,6 +34,7 @@ export function StarRating() {
                      name="hover-feedback"
                      value={value}
                      precision={0.5}
+                     readOnly
                      onChange={(event, newvalue) => {
                         setValue(newvalue)
                      }}
@@ -42,9 +43,8 @@ export function StarRating() {
                      }}
                      emptyIcon={<Star style={{ opacity: 0.5 }} fontSize="inherit" />}
                     />
-                    {value !== null &&  (
-                        <Box> {labels[hover !== -1 ? hover : value]} </Box>
-                    )}
+                    
+                    <p></p>
         </Box>
     )
 }

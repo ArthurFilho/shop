@@ -22,7 +22,7 @@ export function HomePage() {
 
             {RobuxForSell.map((Robux) => {
                 return(
-                    <CatalogContainer id={Robux.id}>
+                    <CatalogContainer key={Robux.id}>
                         <ImageRobux></ImageRobux>
                         <RobuxSell>{Robux.valueRobux} Robux</RobuxSell>
                         <StarsFeedback> <StarRating /> </StarsFeedback>

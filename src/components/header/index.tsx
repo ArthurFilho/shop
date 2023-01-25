@@ -15,7 +15,6 @@ export function Header () {
                 <div> <NavLink to="/contact"> Entrar em contato </NavLink> </div>
             <SearchMenu>
                 <h4>Dúvidas? suporte@deli.com</h4>
-                <Search type="text" placeholder="Pesquise" />
             </SearchMenu>
         </MenuItems>
 

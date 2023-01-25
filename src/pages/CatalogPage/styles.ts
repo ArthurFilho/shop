@@ -5,12 +5,14 @@ export const CatalogTitle = styled.p`
     margin-left: 80px;
     font-weight: bold;
 `
-export const CatalogContainer = styled.div`
+export const CatalogContainer = styled.button`
+    background-color: white;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border: none;
 `
 export const ImageRobux = styled.div`
     width: 200px;

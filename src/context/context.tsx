@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from "react"
+import { createContext, ReactNode, useState } from "react"
 
 export interface RobuxProps  {
     id: number,
@@ -8,7 +8,9 @@ export interface RobuxProps  {
    } 
 
 interface ContextTypes {
-    RobuxForSell: RobuxProps[]
+    RobuxForSell: RobuxProps[];
+    productId: number;
+    InformationRobux: (id: number) => void;
 }
 
 interface ContextProviderProps {
@@ -46,10 +48,18 @@ export const ContextContents = createContext({} as ContextTypes)
 
 export function ContextProvider({children}: ContextProviderProps) {
 
+    const [ productId, setProductId ] = useState(1)
+
+    function InformationRobux(id : number) {
+        setProductId(id)
+    }
+
       return (
           <ContextContents.Provider
             value={{
                 RobuxForSell,
+                InformationRobux,
+                productId,
             }}
           >
             {children}

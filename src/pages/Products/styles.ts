@@ -26,6 +26,7 @@ export const ButtonPay = styled.button`
     border: none;
     background-color: green;
     color: white;
+    cursor: pointer;
 `
 
 export const Description = styled.div`
