@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const VideoMakerGamePass = styled.div`
+export const VideoMakerGamePass = styled.video`
     width: 400px;
     height: 250px;
     background-color: black;

@@ -22,10 +22,9 @@ export function Products() {
         setSellRating(NumberRandom)
      }
 
-    setInterval( function InifiniteLoop () { setInfinityTime(1) },  86400)
-
      useEffect(()=>{
         NumerosAleatorios()
+        setInterval( function InifiniteLoop () { setInfinityTime(1) },  86400)
      }, [infiniteTime])
 
     return(
@@ -44,7 +43,7 @@ export function Products() {
 
                         <StarRating />
 
-                        <SellRate> <SellIcon fontSize="inherit" /> {sellRating} vendidos nas últimas 20 horas. </SellRate>
+                        <SellRate> <SellIcon fontSize="inherit" /> {sellRating} pessoas estão comprando nesse momento. </SellRate>
 
                         <div> 
                             <p> preço promocional </p>
