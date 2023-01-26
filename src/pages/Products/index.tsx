@@ -4,12 +4,11 @@ import { priceFormatter, priceRobux } from "../../utils/formatter";
 import SellIcon from '@mui/icons-material/Sell';
 import { useContext, useEffect, useState } from "react";
 import { ContextContents } from "../../context/context";
-
-
+import { StarRating } from "../../components/StarRating";
 
 export function Products() {
 
-    const { productId, RobuxForSell, CommentsArray, StarRating } = useContext(ContextContents)
+    const { productId, RobuxForSell, CommentsArray } = useContext(ContextContents)
 
     const [ infiniteTime, setInfinityTime ] = useState<number>(0);
 
@@ -73,7 +72,7 @@ export function Products() {
 
         <Avaliations>   
             
-            <h1> <StarRating /> (4) Avaliações </h1>
+            <h1> <StarRating /> ({CommentsArray.length}) Avaliações </h1>
         {CommentsArray.map((info)=>{
             return(
             <Comments>
