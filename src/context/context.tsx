@@ -1,4 +1,6 @@
-import { createContext, ReactNode, useState } from "react"
+import { createContext, ReactNode, useEffect, useState } from "react"
+import { Rating, Box } from "@mui/material";
+import { Star } from "@mui/icons-material";
 
 export interface RobuxProps  {
     id: number,
@@ -7,10 +9,18 @@ export interface RobuxProps  {
     value: number,
    } 
 
+export interface ComentsProps {
+    name: string;
+    Comment: string;
+    starRating: number;
+}
+
 interface ContextTypes {
     RobuxForSell: RobuxProps[];
     productId: number;
     InformationRobux: (id: number) => void;
+    StarRating: () => void;
+    CommentsArray: ComentsProps[];
 }
 
 interface ContextProviderProps {
@@ -44,6 +54,73 @@ export const RobuxForSell = [
     },
 ]
 
+export const CommentsArray = [
+    {
+        name: "Victor",
+        Comment: "Gostei muito de comprar nessa loja",
+        starRating: 5,
+    },
+    {
+        name: "Geovane",
+        Comment: "chegou em 2 horas, muito rapido!!",
+        starRating: 5,
+    },
+    {
+        name: "Julia",
+        Comment: "Suporte incrivel, recebi 1 dia depois",
+        starRating: 5,
+    },
+    {
+        name: "Gerson",
+        Comment: "Que descontão, consegui comprar muitos robux por conta disso",
+        starRating: 5,
+    },
+]
+
+const labels: { [index: string]: string} = {
+    0.5: 'Detestavel',
+    1: 'Horrivel',
+    1.5: 'Muito Ruim',
+    2: 'Ruim',
+    2.5: 'Podia ser melhor',
+    3: 'Mais ou menos',
+    3.5: 'Bom',
+    4: 'Muito Bom',
+    4.5: 'Incrivel',
+    5: 'Perfeito',
+}
+
+export function StarRating() {
+    
+    const [value, setValue] = useState<number | null>(5)
+    const [hover, setHover] = useState(-1) 
+    
+    const [sellRate, setSellRate] = useState<number>()
+
+    const mathRandom = Math.floor(Math.random() * 256);
+
+    useEffect(() => {
+        setSellRate(mathRandom)
+    }, [])
+
+    return(
+        <Box>
+                    <Rating  
+                     name="hover-feedback"
+                     value={value}
+                     readOnly
+                     onChange={(event, newvalue) => {
+                        setValue(newvalue)
+                     }}
+                     onChangeActive={( event, newHover)=>{
+                        setHover(newHover)
+                     }}
+                     emptyIcon={<Star style={{ opacity: 0.5 }} fontSize="inherit" />}
+                    />
+        </Box>
+    )
+}
+
 export const ContextContents = createContext({} as ContextTypes)
 
 export function ContextProvider({children}: ContextProviderProps) {
@@ -60,6 +137,8 @@ export function ContextProvider({children}: ContextProviderProps) {
                 RobuxForSell,
                 InformationRobux,
                 productId,
+                CommentsArray,
+                StarRating,
             }}
           >
             {children}

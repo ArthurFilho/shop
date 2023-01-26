@@ -1,13 +1,12 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
 import { priceFormatter, priceRobux } from "../../utils/formatter";
 import { BoxCatalog, CatalogBody, CatalogContainer, CatalogTitle, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function CatalogPage() {
 
-    const { RobuxForSell, InformationRobux } = useContext(ContextContents)
+    const { RobuxForSell, InformationRobux, StarRating } = useContext(ContextContents)
 
     return(
         <CatalogBody>

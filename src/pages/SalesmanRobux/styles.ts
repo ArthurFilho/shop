@@ -5,11 +5,13 @@ export const SubTitleSalesman = styled.p`
     margin-left: 100px;
 `
 
-export const VideoMaker = styled.div`
+export const VideoMaker = styled.iframe`
     width: 400px;
     height: 250px;
     background-color: black;
     display: flex;
+    margin-bottom: 50px;
+    margin-top: 50px;
 `
 
 export const SalesmanPage = styled.div`

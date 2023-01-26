@@ -1,7 +1,6 @@
 import { CreditCard, Check, Truck } from "phosphor-react";
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
 import { priceFormatter, priceRobux } from "../../utils/formatter";
 
@@ -9,7 +8,7 @@ import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, C
 
 export function HomePage() {
 
-    const { RobuxForSell ,InformationRobux } = useContext(ContextContents)
+    const { RobuxForSell ,InformationRobux, StarRating } = useContext(ContextContents)
 
     return(
         <BodyPart>

@@ -50,3 +50,23 @@ export const SellRate = styled.div`
     justify-content: center;
     gap: 5px;
 `
+
+export const Avaliations = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 200px;
+    h1 {
+        display: flex;
+        margin-bottom: 50px;
+        gap: 10px;
+    }
+`
+export const Comments = styled.div`
+    h3 {    
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 100px;
+    }
+`
