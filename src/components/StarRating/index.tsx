@@ -1,19 +1,18 @@
 import { Rating, Box } from "@mui/material";
 import { Star } from "@mui/icons-material";
-import { useContext, useState } from "react";
-import { ContextContents } from "../../context/context";
+import { useState } from "react";
 
-export function StarRating() {
-    
-    const { value } = useContext(ContextContents)
+
+export function StarRating(props:any) {
     
     const [hover, setHover] = useState(-1) 
+
     
     return(
         <Box>
                     <Rating  
                      name="hover-feedback"
-                     value={value}
+                     value={props.valueStar}
                      readOnly
                     //  onChange={(event, newvalue) => {
                     //     setValue(newvalue)

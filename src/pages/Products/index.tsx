@@ -41,7 +41,7 @@ export function Products() {
 
                         <h1> {priceRobux.format(RobuxProducts.valueRobux)} robux </h1>
 
-                        <StarRating />
+                        <StarRating valueStar={RobuxProducts.starRating} />
 
                         <SellRate> <SellIcon fontSize="inherit" /> {sellRating} pessoas estão comprando nesse momento. </SellRate>
 
@@ -72,12 +72,12 @@ export function Products() {
 
         <Avaliations>   
             
-            <h1> <StarRating /> ({CommentsArray.length}) Avaliações </h1>
+            <h1> <StarRating valueStar={5} /> ({CommentsArray.length}) Avaliações </h1>
         {CommentsArray.map((info)=>{
             return(
             <Comments>
                 
-                <StarRating />
+                <StarRating valueStar={info.starRating} />
                 
                 <h3>{info.name}</h3>
 

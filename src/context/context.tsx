@@ -17,8 +17,6 @@ interface ContextTypes {
     productId: number;
     InformationRobux: (id: number) => void;
     CommentsArray: ComentsProps[];
-    value: number | null;
-    CatalogStarRating: (valueStar:number) => void;
 }
 
 interface ContextProviderProps {
@@ -29,7 +27,7 @@ export const RobuxForSell = [
     {
         id:1,
         valueRobux: 500,
-        starRating: 1,
+        starRating: 4,
         value: 14.99,
     },
     {
@@ -56,7 +54,7 @@ export const CommentsArray = [
     {
         name: "Victor",
         Comment: "Gostei muito de comprar nessa loja",
-        starRating: 4.5,
+        starRating: 4,
     },
     {
         name: "Geovane",
@@ -94,13 +92,9 @@ export const ContextContents = createContext({} as ContextTypes)
 
 export function ContextProvider({children}: ContextProviderProps) {
 
-    const [value, setValue] = useState<number | null>(5)
+
 
     const [ productId, setProductId ] = useState(1)
-
-    function CatalogStarRating(ValueStar: number) {
-        setValue(ValueStar)
-    }
 
     function InformationRobux(id : number) {
         setProductId(id)
@@ -113,8 +107,6 @@ export function ContextProvider({children}: ContextProviderProps) {
                 InformationRobux,
                 productId,
                 CommentsArray,
-                value,
-                CatalogStarRating,
             }}
           >
             {children}

@@ -27,7 +27,7 @@ export function HomePage() {
                     <CatalogContainer key={Robux.id} onClick={() => {InformationRobux(Robux.id)}}>
                         <ImageRobux></ImageRobux>
                         <RobuxSell>{priceRobux.format(Robux.valueRobux)} Robux</RobuxSell>
-                        <StarsFeedback> <StarRating /> </StarsFeedback>
+                        <StarsFeedback> <StarRating valueStar={Robux.starRating} /> </StarsFeedback>
                         <div>{priceFormatter.format(Robux.value)}</div>
                     </CatalogContainer>
                 </NavLink>
