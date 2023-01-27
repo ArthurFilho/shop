@@ -16,6 +16,27 @@ export const MenuItems = styled.div`
     display: flex;
     align-items: center;
     gap: 15px;
+    button {
+        display: flex;
+        border: none;
+        align-items: center;
+        background-color: white;
+        gap: 5px;
+        display: none;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    @media (max-width: 768px) {
+        button {
+            display: flex;
+        }
+        ul {
+        flex-direction: column;
+    }
+    }
 `
 
 export const SearchMenu = styled.div`
