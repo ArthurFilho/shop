@@ -27,6 +27,9 @@ export const ButtonPay = styled.button`
     background-color: green;
     color: white;
     cursor: pointer;
+    @media (max-width: 768px) {
+        width: 200px;
+    }
 `
 
 export const Description = styled.div`

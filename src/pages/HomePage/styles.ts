@@ -23,6 +23,9 @@ export const Catalog = styled.div`
     margin-top: 10px;
     margin-bottom: 150px;
     align-items: center;
+    @media (max-width: 768px) {
+        height: 100%;
+      }
 `
 
 export const Certificate = styled.div`
@@ -30,6 +33,11 @@ export const Certificate = styled.div`
     height: 200px;
     width: 100%;
     margin-top: 10px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: 100%;
+        gap: 40px;
+      }
 `
 export const CertificateContainer = styled.div`
     display: flex;
@@ -70,9 +78,11 @@ export const StarsFeedback = styled.div`
 `
 
 export const BoxCatalog = styled.div`
-    width: 100%;
     display: flex;
     gap: 30px; 
     justify-content: center;
     align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+      }
 `

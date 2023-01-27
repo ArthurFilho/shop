@@ -13,6 +13,7 @@ export const CatalogContainer = styled.button`
     align-items: center;
     text-align: center;
     border: none;
+    cursor: pointer;
 `
 export const ImageRobux = styled.div`
     width: 200px;
@@ -40,4 +41,10 @@ export const BoxCatalog = styled.div`
     display: flex;
     gap: 40px;
     justify-content: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 `

@@ -17,6 +17,11 @@ export const ContactPaga = styled.div`
         border: 1px solid #808080;
         padding: 7.5px;
     }
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
 `
 
 export const ButtonForm = styled.input`
@@ -35,4 +40,6 @@ export const TextAreaContact = styled.textarea`
     height: 100px;
     width: 100%;
     margin-bottom: 50px;
+    padding: 9px;
 `
+

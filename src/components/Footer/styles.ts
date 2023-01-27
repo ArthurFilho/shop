@@ -14,6 +14,10 @@ export const FooterPage = styled.div`
     p {
         color: black;
     }
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+      }
 `
 
 export const PixImageBox = styled.img`

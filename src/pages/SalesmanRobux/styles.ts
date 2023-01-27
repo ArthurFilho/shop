@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const SubTitleSalesman = styled.p`
     display: flex;
     margin-left: 100px;
+    @media (max-width: 768px) {
+      margin-left: 0px;
+      }
 `
 
 export const VideoMaker = styled.iframe`
@@ -21,12 +24,21 @@ export const SalesmanPage = styled.div`
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     h1 {
         display: flex;
         margin-right: 700px;
         margin-bottom: 50px;
     }
+    @media (max-width: 768px) {
+       align-items:center ;
+       justify-content: center;
+       text-align: center;
+       h1 {
+        display: flex;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+      }
 `
 
 export const ButtonCatalog = styled.button`

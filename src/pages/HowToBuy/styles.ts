@@ -12,6 +12,9 @@ export const BuyPage = styled.div`
         background-color: black;
         display: flex;
     }
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `
 
 export const ButtonCatalog = styled.button`
