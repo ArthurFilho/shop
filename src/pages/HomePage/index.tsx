@@ -5,7 +5,7 @@ import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
 import { priceFormatter, priceRobux } from "../../utils/formatter";
 
-import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, RobuxSell, StarsFeedback } from "./styles";
+import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, PriceRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function HomePage() {
 
@@ -28,7 +28,7 @@ export function HomePage() {
                         <ImageRobux></ImageRobux>
                         <RobuxSell>{priceRobux.format(Robux.valueRobux)} Robux</RobuxSell>
                         <StarsFeedback> <StarRating valueStar={Robux.starRating} /> </StarsFeedback>
-                        <div>{priceFormatter.format(Robux.value)}</div>
+                        <PriceRobux>{priceFormatter.format(Robux.value)}</PriceRobux>
                     </CatalogContainer>
                 </NavLink>
                 )

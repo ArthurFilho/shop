@@ -68,9 +68,10 @@ export const ImageRobux = styled.div`
     background-color: black;
 `
 
-export const RobuxSell = styled.p`
+export const RobuxSell = styled.h1`
     margin-bottom: 10px;
     margin-top: 10px;
+    color: #800000;
 `
 
 export const StarsFeedback = styled.div`
@@ -85,4 +86,8 @@ export const BoxCatalog = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
       }
+`
+
+export const PriceRobux = styled.h2`
+    color: #1E90FF;
 `

@@ -1,5 +1,5 @@
 import { HeaderContainer, ImgLogo, Logo, MenuItems } from "./styles";
-import LogoC from "../../assets/Header/Logo.png"
+import LogoC from "../../assets/Header/smurf_cadeirante.png"
 import { NavLink } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRef, useState } from "react";

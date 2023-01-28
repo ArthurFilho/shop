@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FooterPage = styled.div`
-    background-color: #F8F8FF;
+    background-color: #800000;
     color: white;
     height: 300px;
     margin-top: 100px;
