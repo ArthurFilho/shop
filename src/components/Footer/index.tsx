@@ -1,5 +1,5 @@
 import { Copyright, CopyrightContainer, FooterPage, InformationContainer, LineCopyright, PagamentForms, PixImageBox } from "./styles";
-import PixImage from "../../assets/MainPage/pix.svg";
+import PixImage from "../../assets/MainPage/pix.png";
 import { NavLink } from "react-router-dom";
 
 export function FooterPart() {
@@ -13,7 +13,7 @@ export function FooterPart() {
                 </InformationContainer>
                 <LineCopyright />
                 <CopyrightContainer>
-                <Copyright> © 2023 Império dos Bobux - Todos os direitos reservados. </Copyright>
+                <Copyright> © 2023 Império dos Bobux - copyright</Copyright>
                 <PagamentForms><PixImageBox src={PixImage} /></PagamentForms>
                 </CopyrightContainer>
             </FooterPage>

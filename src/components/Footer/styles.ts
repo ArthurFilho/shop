@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const FooterPage = styled.div`
-    background-color: #800000;
+    background-color: #afacaa;
     color: white;
     height: 300px;
     margin-top: 100px;
@@ -10,6 +10,7 @@ export const FooterPage = styled.div`
     h4, p  {
         gap: 10px;
         padding-left: 150px;
+        color: black;
     }
     p {
         color: black;
@@ -21,8 +22,9 @@ export const FooterPage = styled.div`
 `
 
 export const PixImageBox = styled.img`
-    width: 400px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    margin-left: 150px;
 `
 
 export const Copyright = styled.p`
