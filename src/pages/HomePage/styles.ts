@@ -13,6 +13,12 @@ export const Banner = styled.div`
     background-color: black;
     height: 500px;
     width: 100%;
+    @media (max-width: 768px) {
+        img {
+            width: 100%;
+            height: 100%;
+    }
+      }
 `
 
 export const Catalog = styled.div`
@@ -72,7 +78,7 @@ export const ImageRobux = styled.div`
 export const RobuxSell = styled.h1`
     margin-bottom: 10px;
     margin-top: 10px;
-    color: #800000;
+
 `
 
 export const StarsFeedback = styled.div`
@@ -90,7 +96,7 @@ export const BoxCatalog = styled.div`
 `
 
 export const PriceRobux = styled.h2`
-    color: #1E90FF;
+
 `
 
 export const Image = styled.img`

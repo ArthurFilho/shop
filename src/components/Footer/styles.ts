@@ -37,6 +37,10 @@ export const CopyrightContainer = styled.div`
     flex-direction: column;
     margin-top: 20px;
     gap: 10px;
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+      }
 `
 
 export const LineCopyright = styled.hr`
