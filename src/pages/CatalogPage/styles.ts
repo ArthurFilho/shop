@@ -21,9 +21,10 @@ export const ImageRobux = styled.div`
     display: flex;
 `
 
-export const RobuxSell = styled.p`
+export const RobuxSell = styled.h1`
     margin-bottom: 10px;
     margin-top: 10px;
+    color: #800000;
 `
 
 export const StarsFeedback = styled.div`
@@ -51,4 +52,8 @@ export const BoxCatalog = styled.div`
 export const Image = styled.img`
     width: 250px;
     height: 200px;
+`
+
+export const PriceRobux = styled.h2`
+    color: #1E90FF;
 `

@@ -5,6 +5,7 @@ import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
 import { priceFormatter, priceRobux } from "../../utils/formatter";
 import RobuxImage from "../../assets/robux.png"
+import BannerImage from "../../assets/banner.png"
 
 import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, Image, ImageRobux, PriceRobux, RobuxSell, StarsFeedback } from "./styles";
 
@@ -14,7 +15,7 @@ export function HomePage() {
 
     return(
         <BodyPart>
-            <Banner />
+            <Banner> <img src={BannerImage}/> </Banner>
             <Catalog> 
             
             <h2>Promoção</h2>

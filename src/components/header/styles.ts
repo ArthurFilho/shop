@@ -25,6 +25,7 @@ export const MenuItems = styled.div`
         display: none;
     }
     ul {
+        font-size: 25px;
         display: flex;
         list-style: none;
         gap: 20px;
