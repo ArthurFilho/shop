@@ -38,7 +38,7 @@ export const CatalogBody = styled.div`
 
 export const BoxCatalog = styled.div`
     display: flex;
-    gap: 40px;
+    gap: 100px;
     justify-content: center;
     @media (max-width: 768px) {
         flex-direction: column;
@@ -46,4 +46,9 @@ export const BoxCatalog = styled.div`
         align-items: center;
         justify-content: center;
       }
+`
+
+export const Image = styled.img`
+    width: 250px;
+    height: 200px;
 `
