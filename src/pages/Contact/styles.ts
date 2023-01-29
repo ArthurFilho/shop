@@ -25,7 +25,7 @@ export const ContactPaga = styled.div`
 `
 
 export const ButtonForm = styled.input`
-        background-color: green;
+        background-color: #B4070b;
         color: white;
         width: 200px;
         height: 40px;
