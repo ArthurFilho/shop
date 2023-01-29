@@ -4,8 +4,9 @@ import { NavLink } from "react-router-dom";
 import { StarRating } from "../../components/StarRating";
 import { ContextContents } from "../../context/context";
 import { priceFormatter, priceRobux } from "../../utils/formatter";
+import RobuxImage from "../../assets/robux.png"
 
-import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, ImageRobux, PriceRobux, RobuxSell, StarsFeedback } from "./styles";
+import { Banner, BodyPart, BoxCatalog, Catalog, CatalogContainer, Certificate, CertificateContainer, Image, ImageRobux, PriceRobux, RobuxSell, StarsFeedback } from "./styles";
 
 export function HomePage() {
 
@@ -25,7 +26,7 @@ export function HomePage() {
                 return(
                 <NavLink to="/products">
                     <CatalogContainer key={Robux.id} onClick={() => {InformationRobux(Robux.id)}}>
-                        <ImageRobux></ImageRobux>
+                        <ImageRobux> <Image src={RobuxImage} /> </ImageRobux>
                         <RobuxSell>{priceRobux.format(Robux.valueRobux)} Robux</RobuxSell>
                         <StarsFeedback> <StarRating valueStar={Robux.starRating} /> </StarsFeedback>
                         <PriceRobux>{priceFormatter.format(Robux.value)}</PriceRobux>
@@ -48,7 +49,7 @@ export function HomePage() {
                 
                 <CertificateContainer>
                     <Check size={100} />
-                    <h4>SATISFAÇÃO GARANTIDA</h4>
+                    <h4>SATISFAÇÃO GARANTIDA!</h4>
                     <p>Garantimos que você fique contente com sua compra, caso contrário devolvemos seu dinheiro!</p>
                 </CertificateContainer>
                 

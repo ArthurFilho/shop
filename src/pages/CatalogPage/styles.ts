@@ -19,7 +19,6 @@ export const ImageRobux = styled.div`
     width: 200px;
     height: 220px;
     display: flex;
-    background-color: black;
 `
 
 export const RobuxSell = styled.p`

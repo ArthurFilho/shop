@@ -8,24 +8,14 @@ import { StarRating } from "../../components/StarRating";
 
 export function Products() {
 
-    const { productId, RobuxForSell, CommentsArray } = useContext(ContextContents)
+    const { productId, RobuxForSell, CommentsArray } = useContext(ContextContents);
 
-    const [ infiniteTime, setInfinityTime ] = useState<number>(0);
-
-    const [ sellRating, setSellRating] = useState<number>(30);
+    const [ sellRating, setSellRating] = useState<number>(1);
 
      const RobuxSelected = RobuxForSell.filter(Robux => (Robux.id === productId));
 
-     function NumerosAleatorios () {
-      const NumberRandom = Math.floor(Math.random() * 100);
-        setSellRating(NumberRandom)
-     }
-
-     useEffect(()=>{
-        NumerosAleatorios()
-        setInterval( function InifiniteLoop () { setInfinityTime(1) },  86400)
-     }, [infiniteTime])
-
+  
+   
     return(
     <ProductsContainer>
             

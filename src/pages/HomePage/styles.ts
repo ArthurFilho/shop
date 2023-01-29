@@ -65,7 +65,8 @@ export const ImageRobux = styled.div`
     width: 200px;
     height: 220px;
     display: flex;
-    background-color: black;
+    align-items: center;
+    justify-content: center;
 `
 
 export const RobuxSell = styled.h1`
@@ -80,7 +81,7 @@ export const StarsFeedback = styled.div`
 
 export const BoxCatalog = styled.div`
     display: flex;
-    gap: 30px; 
+    gap: 100px; 
     justify-content: center;
     align-items: center;
     @media (max-width: 768px) {
@@ -90,4 +91,9 @@ export const BoxCatalog = styled.div`
 
 export const PriceRobux = styled.h2`
     color: #1E90FF;
+`
+
+export const Image = styled.img`
+    width: 250px;
+    height: 200px;
 `
