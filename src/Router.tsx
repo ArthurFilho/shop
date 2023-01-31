@@ -4,6 +4,7 @@ import { ContactPage } from './pages/Contact'
 import { Gamepass } from './pages/Gamepass'
 import { HomePage } from './pages/HomePage'
 import { HowToBuy } from './pages/HowToBuy'
+import { PagamentPage } from './pages/PagamentScreen'
 import { Products } from './pages/Products'
 import { SalesmanRobux } from './pages/SalesmanRobux'
 
@@ -18,6 +19,7 @@ export function Router() {
         <Route path="/gamepass" element={<Gamepass />} />
         <Route path="/salesman" element={<SalesmanRobux />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/pagament" element={<PagamentPage />} />
       </Route>
     </Routes>
   )
