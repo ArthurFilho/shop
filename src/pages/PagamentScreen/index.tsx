@@ -1,4 +1,6 @@
 import axios from "axios"
+import { Provider } from "react-redux"
+import { store } from "../../store/store"
 
 const api = axios.create({
     baseURL: "https://api.mercadopago.com"
@@ -17,7 +19,7 @@ export function PagamentPage () {
     }
 
     return(
-        <>
+        <Provider store={store}>
         <form onSubmit={handleSubmit}>
 
             <div>
@@ -40,6 +42,6 @@ export function PagamentPage () {
             </div>
 
         </form>
-        </>
+        </Provider>
     )
 }
